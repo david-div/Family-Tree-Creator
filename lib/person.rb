@@ -1,10 +1,11 @@
 class Person
-  attr_accessor :name, :dob, :dod
 
-  def initialize(name, dob, dod='none')
-    @name = name
-    @dob = dob
-    @dod = dod
+  attr_accessor :name, :dob, :status
+
+  def initialize(person = {})
+    @name = person[:name]
+    @dob = person[:dob]
+    @status = person[:status]
   end
 
 end
